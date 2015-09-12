@@ -1,0 +1,75 @@
+html{
+	color: #fff;
+	text-align: center;
+	font-family: fantasy;
+}
+
+body, h1{
+	margin: 0;
+}
+
+h1{
+	font-size: 4em;
+}
+
+h2{
+	font-size: 3em;
+}
+
+.parallaxParent{
+	height: 100vh;
+	overflow: hidden;
+}
+.parallaxParent > *{
+	height: 200%;
+	position: relative;
+	top: -100%;
+}
+
+.one{
+	background-image: url('images/Para1.jpg');
+}
+
+.welcome{
+	height: 5em;
+	width: 50vw;
+	bottom: 25vh;
+	left: 25vw;
+	background-color: rgba(251, 187, 80, 0.8);
+	/*background-color: rgba(255, 69, 111, 0.8);*/
+	border-radius: 5px;
+	position: absolute;
+	padding-top: 3em;
+	padding-bottom: 3em;
+}
+
+.buffer{
+	background-color: #000;
+	border: 4px double #FBBB50;
+	/*border: 3px double #FACE2E;*/
+}
+
+.two{
+	background-image: url('images/Para2.jpg');
+}
+
+.three{
+	background-image: url('images/Para3.jpg');
+}
+
+.four{
+	background-image: url('images/Para4.jpg');
+}
+
+.five{
+	background-image: url('images/Para5.jpg');
+}
+
+
+
+
+
+
+
+
+
