@@ -13,7 +13,7 @@ $(function(){
 	function makeParallax(loc, dur, yVal){
 		var current = new ScrollMagic.Scene({triggerElement: loc, duration: dur});
 		current.setTween(loc + ' > div', {y: yVal, ease: Linear.easeNone})
-		current.addIndicators()
+		// current.addIndicators()
 		current.addTo(controller);
 	};
 
@@ -23,9 +23,24 @@ $(function(){
 	makeParallax("#section4", "200%", "80%");
 	makeParallax("#section5", "100%", "50%");
 
-	// var section1 = new ScrollMagic.Scene({triggerElement: "#section1", duration: "200%"});
+	function allowContactSubmission(){
+		var name = $('#entry_348166146')[0].value;
+		var email = $('#entry_73439495')[0].value;
+		var subject = $('#entry_274250116')[0].value;
+		var message = $('#entry_1098022282')[0].value;
+		if (name.length > 0 && email.indexOf('@') > -1 && email.indexOf('.') > -1 && subject.length > 0 && message.length > 0){
+			$('#ss-submit').css({'pointer-events': 'auto', 'background-color': '#000', 'color': '#fff', 'border': '1px solid #fff'});
+			$('#ss-submit').hover(function(){
+				$(this).css({'background-color': '#fff', 'color': '#000', 'border': '1px solid red'})}, function(){
+				$(this).css({'background-color': '#000', 'color': '#fff', 'border': '1px solid #fff'})
+			});
+		}
+	}
 
-	// section1.setTween("#section1 > div", {y: "80%", ease: Linear.easeNone})
-	// section1.addIndicators()
-	// section1.addTo(controller);
+	$('#contact').keydown(allowContactSubmission);
 });
+
+
+
+
+

@@ -29,7 +29,7 @@ a:visited{
 }
 
 a:hover{
-	color: #CE0B4D;
+	color: #E9674B;
 }
 
 .menu{
@@ -147,6 +147,9 @@ a:hover{
 		font-size: 2em;
 		height: 0;
 		overflow: visible;
+	    width: 80vw;
+	    position: relative;
+	    left: 10vw;
 	}
 
 	#contact{
@@ -195,6 +198,7 @@ a:hover{
 		input, textarea{
 			float: right;
 			border-radius: 5px;
+			font-family: 'Slabo 27px', serif;
 		}
 
 		textarea{
@@ -216,11 +220,12 @@ a:hover{
 			/*submit button.*/
 			font-family: 'Amatic SC', cursive;
 			letter-spacing: 2px;
-			background-color: #000;
-			color: #fff;
-			border: 1px solid #fff;
+			background-color: #929292;
+			color: #000;
+			border: 1px solid #000;
 			font-size: 1em;
 			margin-left: 0;
+			pointer-events: none;
 		}
 
 		#ss-submit:hover{
@@ -261,11 +266,16 @@ a:hover{
 	.contactRight{
 		width: 100%;
 		bottom: 70px;
+		max-height: 40%;
 	}
 
 	input{
 		width: 80%;
 		margin-left: 0;
+	}
+
+	textarea{
+		height: 23vh;
 	}
 
 	#navigation-table{
@@ -306,7 +316,7 @@ a:hover{
 
 	.git, .twit, .linked, .mail{
 		font-size: 1.5em;
-		top: 0;
+		margin: auto;
 	}
 
 	.textArea{
