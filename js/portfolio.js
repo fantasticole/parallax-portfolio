@@ -24,16 +24,31 @@ $(function(){
 	makeParallax("#section5", "100%", "50%");
 
 	function allowContactSubmission(){
-		var name = $('#entry_348166146')[0].value;
+		var nameLength = $('#entry_348166146')[0].value.length;
 		var email = $('#entry_73439495')[0].value;
-		var subject = $('#entry_274250116')[0].value;
-		var message = $('#entry_1098022282')[0].value;
-		if (name.length > 0 && email.indexOf('@') > -1 && email.indexOf('.') > -1 && subject.length > 0 && message.length > 0){
+		var subjectLength = $('#entry_274250116')[0].value.length;
+		var messageLength = $('#entry_1098022282')[0].value.length;
+		var testsPassed = 0;
+		if (nameLength > 0){
+			testsPassed++
+		}
+		if (email.indexOf('@') > -1 && email.indexOf('.') > -1){
+			testsPassed++
+		}
+		if (subjectLength > 0){
+			testsPassed++
+		}
+		if (messageLength > 0){
+			testsPassed++
+		}
+
+		if (testsPassed > 3){
 			$('#ss-submit').css({'pointer-events': 'auto', 'background-color': '#000', 'color': '#fff', 'border': '1px solid #fff'});
 			$('#ss-submit').hover(function(){
 				$(this).css({'background-color': '#fff', 'color': '#000', 'border': '1px solid red'})}, function(){
 				$(this).css({'background-color': '#000', 'color': '#fff', 'border': '1px solid #fff'})
 			});
+			$('.instructions').hide();
 		}
 	}
 

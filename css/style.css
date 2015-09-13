@@ -183,6 +183,7 @@ a:hover{
 
 		.ss-q-item-label{
 			/*question prompt.*/
+			font-size: 1.3em;
 			float: left;
 		}
 
@@ -204,13 +205,14 @@ a:hover{
 		textarea{
 			width: 80%;
 			resize: none;
+			height: 21vh;
 		}
 
 		#navigation-table{
 			/*submit button.*/
 			position: relative;
 			width: 10vw;
-			left: 35vw;
+			left: 37vw;
 			margin-top: 115px;
 			margin-bottom: 10px;
 			min-width: 38px;
@@ -220,6 +222,7 @@ a:hover{
 			/*submit button.*/
 			font-family: 'Amatic SC', cursive;
 			letter-spacing: 2px;
+			width: 100%;
 			background-color: #929292;
 			color: #000;
 			border: 1px solid #000;
@@ -232,6 +235,16 @@ a:hover{
 			background-color: #fff;
 			color: #000;
 			border: 1px solid red;
+		}
+
+		.instructions{
+			position: relative;
+			bottom: 3vh;
+			left: 15vw;
+			width: 70vw;
+			font-family: 'Amatic SC', cursive;
+			font-size: 1.3em;
+			letter-spacing: 2px;
 		}
 
 .five{
@@ -249,13 +262,13 @@ a:hover{
 	}
 
 
-@media (max-width: 740px){
+@media (max-width: 800px){
 	.textArea p{
 		font-size: 1.5em;
 	}
 
 	#contact{
-		min-height: 300px;
+		min-height: 330px;
 	}
 
 	.contactLeft{
@@ -275,13 +288,14 @@ a:hover{
 	}
 
 	textarea{
+		width: 80%;
 		height: 23vh;
 	}
 
 	#navigation-table{
-		bottom: -140px;
+		bottom: -170px;
 		width: 30vw;
-		left: 25vw;
+		left: 30vw;
 	}
 
 	.git, .twit, .linked, .mail{
@@ -290,6 +304,10 @@ a:hover{
 }
 
 @media (max-width: 550px){
+	.ss-q-item-label, .instructions{
+		font-size: 1.1em;
+	}
+
 	input, textarea{
 		width: 70%;
 	}
