@@ -1,19 +1,35 @@
 html{
 	color: #fff;
 	text-align: center;
-	font-family: fantasy;
+	font-family: 'Slabo 27px', serif;
+	background-color: #000;
 }
 
-body, h1{
+body, h1, p{
 	margin: 0;
 }
 
 h1{
+	font-family: 'Amatic SC', cursive;
 	font-size: 4em;
 }
 
 h2{
+	font-family: 'Amatic SC', cursive;
 	font-size: 3em;
+}
+
+a{
+	color: #0BB4CE;
+	text-decoration: none;
+}
+
+a:visited{
+	text-decoration: none;
+}
+
+a:hover{
+	color: #CE0B4D;
 }
 
 .parallaxParent{
@@ -27,42 +43,73 @@ h2{
 }
 
 .one{
-	background-image: url('images/Para1.jpg');
+	background-image: url('../images/Para1.jpg');
 }
 
-.welcome{
-	height: 5em;
-	width: 50vw;
-	bottom: 25vh;
-	left: 25vw;
-	background-color: rgba(251, 187, 80, 0.8);
-	/*background-color: rgba(255, 69, 111, 0.8);*/
-	border-radius: 5px;
-	position: absolute;
-	padding-top: 3em;
-	padding-bottom: 3em;
-}
+	.welcome{
+		min-height: 8em;
+		width: 50vw;
+		bottom: 20vh;
+		left: 25vw;
+		background-color: rgba(251, 187, 80, 0.92);
+		border-radius: 5px;
+		position: absolute;
+		padding-top: 2em;
+		padding-bottom: 3em;
+		border: 3px solid #CE0B4D;
+		/*border: 3px solid #971E51;*/
+		/*border: 3px solid #E9674B;*/
+	}
 
-.buffer{
+	.welcome h1, .welcome h2, .welcome i{
+		/*text-shadow: 2px 2px 5px #CE0B4D;*/
+		/*text-shadow: 3px 3px 5px #E9674B;*/
+		text-shadow: 2px 2px 5px #971E51;
+		margin: 0;
+	}
+
+	.arrow{
+		position: relative;
+	}
+
+.infoTab{
 	background-color: #000;
-	border: 4px double #FBBB50;
+	/*border-top: 4px double #FBBB50;*/
+	/*border-bottom: 4px double #FBBB50;*/
 	/*border: 3px double #FACE2E;*/
 }
 
+	#about{
+		padding: 5vh;
+	}
+
+	.me{
+		width: 20vw;
+	    float: left;
+	    border-radius: 5px;
+	    margin: 5px;
+	}
+
+	#about h2{
+		margin: 0;
+	}
+
 .two{
-	background-image: url('images/Para2.jpg');
+	background-image: url('../images/Para2.jpg');
 }
 
 .three{
-	background-image: url('images/Para3.jpg');
+	background-image: url('../images/Para3.jpg');
+	overflow: auto;
+	/*padding-bottom: 20vh;*/
 }
 
 .four{
-	background-image: url('images/Para4.jpg');
+	background-image: url('../images/Para4.jpg');
 }
 
 .five{
-	background-image: url('images/Para5.jpg');
+	background-image: url('../images/Para5.jpg');
 }
 
 
