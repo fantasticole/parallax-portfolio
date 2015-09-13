@@ -5,7 +5,7 @@ html{
 	background-color: #000;
 }
 
-body, h1, p{
+body, h1, h2, p, i{
 	margin: 0;
 }
 
@@ -30,6 +30,18 @@ a:visited{
 
 a:hover{
 	color: #CE0B4D;
+}
+
+.menu{
+	position: fixed;
+	top: 3vw;
+	right: 3vw;
+	height: 30px;
+	width: 30px;
+	background-color: #000;
+	z-index: 5;
+	padding: 5px;
+	border-radius: 5px;
 }
 
 .parallaxParent{
@@ -57,15 +69,10 @@ a:hover{
 		padding-top: 2em;
 		padding-bottom: 3em;
 		border: 3px solid #CE0B4D;
-		/*border: 3px solid #971E51;*/
-		/*border: 3px solid #E9674B;*/
 	}
 
-	.welcome h1, .welcome h2, .welcome i{
-		/*text-shadow: 2px 2px 5px #CE0B4D;*/
-		/*text-shadow: 3px 3px 5px #E9674B;*/
+	.welcome{
 		text-shadow: 2px 2px 5px #971E51;
-		margin: 0;
 	}
 
 	.arrow{
@@ -74,13 +81,20 @@ a:hover{
 
 .infoTab{
 	background-color: #000;
-	/*border-top: 4px double #FBBB50;*/
-	/*border-bottom: 4px double #FBBB50;*/
-	/*border: 3px double #FACE2E;*/
 }
+
+	.infoTab h2{
+		margin-top: 0.83em;
+		margin-bottom: 0.83em;
+	}
 
 	#about{
 		padding: 5vh;
+	}
+
+	#about h2{
+		margin: 0;
+		margin-bottom: 10px;
 	}
 
 	.me{
@@ -90,8 +104,29 @@ a:hover{
 	    margin: 5px;
 	}
 
-	#about h2{
-		margin: 0;
+.sectionContent{
+	position: relative;
+	bottom: 100vh;
+    width: 100vw;
+    margin: auto;
+    overflow: visible;
+    height: 0vw;
+}
+
+	.textArea{
+		position: absolute;
+	    top: 25vh;
+	    border: .5vw solid white;
+	    max-height: 60vh;
+	    width: 70vw;
+	    left: 9.5vw;
+	    padding: 5vw;
+	    background-color: rgba(255, 255, 255, 0.5);
+	}
+
+	.textArea p{
+		font-size: 2em;
+		text-shadow: 2px 2px 1px #000;
 	}
 
 .two{
@@ -101,19 +136,183 @@ a:hover{
 .three{
 	background-image: url('../images/Para3.jpg');
 	overflow: auto;
-	/*padding-bottom: 20vh;*/
 }
 
 .four{
 	background-image: url('../images/Para4.jpg');
 }
 
+	#submitted{
+		visibility: hidden;
+		font-size: 2em;
+		height: 0;
+		overflow: visible;
+	}
+
+	#contact{
+		position: relative;
+		left: 5vw;
+		width: 90vw;
+		font-family: 'Amatic SC', cursive;
+		letter-spacing: 2px;
+		padding-bottom: 30px;
+	}
+
+		.contactLeft{
+			position: absolute;
+			left: 0;
+			min-width: 30vw;
+			min-height: 115px;
+			margin-right: 50px;
+		}
+
+		.contactRight{
+			position: absolute;
+			right: 0;
+			width: 55vw;
+			min-height: 115px;
+		}
+
+		.ss-form-question{
+			/*Prompt and form.*/
+			margin-bottom: 25px;
+		}
+
+		.ss-q-item-label{
+			/*question prompt.*/
+			float: left;
+		}
+
+		.ss-required-asterisk{
+			color: red;
+		}
+
+		input{
+			width: 160px;
+			margin-left: 10px;
+		}
+
+		input, textarea{
+			float: right;
+			border-radius: 5px;
+		}
+
+		textarea{
+			width: 80%;
+			resize: none;
+		}
+
+		#navigation-table{
+			/*submit button.*/
+			position: relative;
+			width: 10vw;
+			left: 35vw;
+			margin-top: 115px;
+			margin-bottom: 10px;
+			min-width: 38px;
+		}
+
+		#ss-submit{
+			/*submit button.*/
+			font-family: 'Amatic SC', cursive;
+			letter-spacing: 2px;
+			background-color: #000;
+			color: #fff;
+			border: 1px solid #fff;
+			font-size: 1em;
+			margin-left: 0;
+		}
+
+		#ss-submit:hover{
+			background-color: #fff;
+			color: #000;
+			border: 1px solid red;
+		}
+
 .five{
 	background-image: url('../images/Para5.jpg');
 }
 
+	.git, .twit, .linked, .mail{
+		width: 24%;
+		display: inline-block;
+		text-shadow: 3px 3px 3px #000;
+		font-size: 2.5em;
+		position: relative;
+	    top: 25vh;
+		font-family: 'Amatic SC', cursive;
+	}
 
 
+@media (max-width: 740px){
+	.textArea p{
+		font-size: 1.5em;
+	}
+
+	#contact{
+		min-height: 300px;
+	}
+
+	.contactLeft{
+		width: 100%;
+		top: 0;
+	}
+
+	.contactRight{
+		width: 100%;
+		bottom: 70px;
+	}
+
+	input{
+		width: 80%;
+		margin-left: 0;
+	}
+
+	#navigation-table{
+		bottom: -140px;
+		width: 30vw;
+		left: 25vw;
+	}
+
+	.git, .twit, .linked, .mail{
+		font-size: 2em;
+	}
+}
+
+@media (max-width: 550px){
+	input, textarea{
+		width: 70%;
+	}
+
+	.git, .twit, .linked, .mail{
+		width: 45%;
+		height: 40vh;
+		top: 8vh;
+		margin-top: 2vh;
+	}
+}
+
+@media (max-height: 350px){
+	.welcome{
+		height: 50vh;
+		bottom: 10vh;
+		padding-bottom: 5vh;
+		padding-top: 5vh;
+	}
+
+	.welcome h1, .welcome h2, .welcome i{
+		font-size: 2em;
+	}
+
+	.git, .twit, .linked, .mail{
+		font-size: 1.5em;
+		top: 0;
+	}
+
+	.textArea{
+		top: 10vh;
+	}
+}
 
 
 

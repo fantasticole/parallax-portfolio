@@ -1,12 +1,6 @@
 $(function(){
 	var controller = new ScrollMagic.Controller();
 
-	var section1 = new ScrollMagic.Scene({triggerElement: "#section1", duration: "200%"});
-
-	section1.setTween("#section1 > div", {y: "80%", ease: Linear.easeNone})
-	section1.addIndicators()
-	section1.addTo(controller);
-
 	var tl = new TimelineMax();
 
 	tl.to(".arrow", 0.6,
@@ -16,27 +10,22 @@ $(function(){
 			yoyo: true
 		});
 
-	var section2 = new ScrollMagic.Scene({triggerElement: "#section2", duration: "200%"});
+	function makeParallax(loc, dur, yVal){
+		var current = new ScrollMagic.Scene({triggerElement: loc, duration: dur});
+		current.setTween(loc + ' > div', {y: yVal, ease: Linear.easeNone})
+		current.addIndicators()
+		current.addTo(controller);
+	};
 
-	section2.setTween("#section2 > div", {y: "80%", ease: Linear.easeNone})
-	section2.addIndicators()
-	section2.addTo(controller);
+	makeParallax("#section1", "200%", "80%");
+	makeParallax("#section2", "200%", "80%");
+	makeParallax("#section3", "200%", "80%");
+	makeParallax("#section4", "200%", "80%");
+	makeParallax("#section5", "100%", "50%");
 
-	var section3 = new ScrollMagic.Scene({triggerElement: "#section3", duration: "200%"});
+	// var section1 = new ScrollMagic.Scene({triggerElement: "#section1", duration: "200%"});
 
-	section3.setTween("#section3 > div", {y: "80%", ease: Linear.easeNone})
-	section3.addIndicators()
-	section3.addTo(controller);
-
-	var section4 = new ScrollMagic.Scene({triggerElement: "#section4", duration: "200%"});
-
-	section4.setTween("#section4 > div", {y: "80%", ease: Linear.easeNone})
-	section4.addIndicators()
-	section4.addTo(controller);
-
-	var section5 = new ScrollMagic.Scene({triggerElement: "#section5", duration: "100%"});
-
-	section5.setTween("#section5 > div", {y: "50%", ease: Linear.easeNone})
-	section5.addIndicators()
-	section5.addTo(controller);
+	// section1.setTween("#section1 > div", {y: "80%", ease: Linear.easeNone})
+	// section1.addIndicators()
+	// section1.addTo(controller);
 });
