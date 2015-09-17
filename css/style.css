@@ -19,9 +19,15 @@
 	font-size: 3em;
 }
 
+#bootstrapOverrides h3{
+	font-family: 'Amatic SC', cursive;
+	font-size: 2em;
+}
+
 #bootstrapOverrides a{
 	color: #E1B62F;
 	text-decoration: none;
+	outline: none;
 }
 
 #bootstrapOverrides a:visited{
@@ -35,11 +41,13 @@
 #bootstrapOverrides .navbar {
   background-color: #000;
   border-color: #000;
+  max-height: 55px;
 }
 
 .navbar a {
-  font-size: 1.5em;
+  font-size: 100%;
 }
+
 
 	#bootstrapOverrides .nav{
 	    width: 100vw;
@@ -407,36 +415,140 @@
 				  color: #E9674B;
 				}
 
+
+
+
 /*Projects Page*/
 .projects{
 	height: 100vh;
-	width: 320vw;
-	position: absolute;
-	left: 5vw;
+	width: 325vw;
 	background-color: #000;
+	background-image: url('../images/projects.png');
 	overflow-x: scroll;
 	overflow-y: hidden;
-	white-space: nowrap;
 	padding-top: 60px;
 	padding-bottom: 30vh;
 }
 
 #bootstrapOverrides .projects .nav li{
-		width: 16.5vw;
+	width: 16.5vw;
 }
 
 .projectDetails{
-	height: auto;
+	height: calc(100vh - 70px);
 	width: 75vw;
 	padding-left: 15vw;
 	overflow-y: scroll;
 	float: left;
+	margin-bottom: 10px;
 }
 
-.projectDetails img{
-	height: auto;
-	width: 100%;
+#mismatch{
+	margin-left: 5vw;
 }
+
+	.projectDetails img, .ttt{
+		height: 36.3vw;
+		width: 60vw;
+		border-radius: 5px;
+	}
+
+	.ttt{
+		border-color: #000;
+	}
+
+	.projectInfo{
+		margin-top: 10px;
+		padding: 5px;
+		background-color: rgba(0, 0, 0, 0.7);
+		border-radius: 5px;
+	}
+
+		#bootstrapOverrides .narrow{
+			width: 15vw;
+			height: auto;
+		}
+		
+		#bootstrapOverrides .wide{
+			width: 35vw;
+			height: auto;
+		}
+
+		.links{
+			font-size: 1.5em;
+		}
+
+		.projectInfo p{
+			padding: 5px;
+		}
+
+		#bootstrapOverrides .panel {
+		  background-color: transparent;
+		  border-color: #fff;
+		  border-radius: 0;
+		}
+		
+		#bootstrapOverrides .panel-group {
+		  word-wrap: break-word;
+		}
+		
+		#bootstrapOverrides .panel-group .panel:first-child {
+		  border-radius: 6px 6px 0 0;
+		}
+		
+		#bootstrapOverrides .panel-group .panel:last-child {
+		  border-radius: 0 0 6px 6px;
+		}
+		
+		#bootstrapOverrides .panel-group .panel + .panel {
+		  margin-top: 0;
+		}
+		
+		#bootstrapOverrides .panel-group i,
+		#bootstrapOverrides .panel-group .panel-body {
+		  transition-duration: 200ms;
+		}
+		
+		.down {
+		  -webkit-transform: rotate(90deg);
+		  -moz-transform: rotate(90deg);
+		}
+		
+		#bootstrapOverrides .panel-default > .panel-heading {
+		  background-color: transparent;
+		}
+		
+		#bootstrapOverrides .well {
+		  display: inline-block;
+		  text-align: left;
+		  padding-left: 15px;
+		  font-family: courier;
+		  min-width: 40%;
+		  max-width: 100%;
+		  overflow: auto;
+		  position: relative;
+		  margin: auto;
+		  margin-top: 10px;
+		  margin-bottom: 10px;
+		  background-color: rgba(255, 255, 255, 0.95);
+		  color: #837489;
+		  word-wrap: normal;
+		}
+
+		/*Well code colors.*/
+		.bl {color: #028AE3;} .gr {color: #00D79B;} .pr {color: #D500FA;} .yw {color: #FAB000;} .dk {color: #020B22;} .or {color: #FFB400;} .lb {color: #72C0BA;}
+		
+		.tab {
+			margin-left: 25px;
+		}
+		
+		.code {
+		  font-family: courier;
+		  color: #E9674B;
+		}
+
+
+
 
 
 @media (max-width: 800px){
@@ -531,7 +643,7 @@
 		border-color: #0BB4CE;
 	}
 
-	#bootstrapOverrides .nav li{
+	#bootstrapOverrides .nav li, #bootstrapOverrides .projects .nav li{
 		width: 100vw;
 	}
 

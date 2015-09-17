@@ -10,6 +10,13 @@ $(function(){
         }, 600);
         event.preventDefault();
     });
+
+   	$('.panel-title a').click(function(){
+		$('i', this).toggleClass('down');
+		$('.panel-title a').not(this).each(function(){
+			$('i', this).removeClass('down');
+		})
+	})
 });
 
 
