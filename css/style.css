@@ -20,7 +20,7 @@
 }
 
 #bootstrapOverrides a{
-	color: #0BB4CE;
+	color: #E1B62F;
 	text-decoration: none;
 }
 
@@ -29,7 +29,7 @@
 }
 
 #bootstrapOverrides a:hover{
-	color: #E1B62F;
+	color: #0BB4CE;
 }
 
 #bootstrapOverrides .navbar {
@@ -68,11 +68,11 @@
 	}
 
 	#bootstrapOverrides .navbar-default .navbar-toggle .icon-bar {
-	  background-color: #0BB4CE;
+	  background-color: #E1B62F;
 	}
 	
 	#bootstrapOverrides .navbar-default .navbar-toggle:hover{
-	  background-color: #0BB4CE;
+	  background-color: #E1B62F;
 	}
 
 	#bootstrapOverrides .navbar-default .navbar-toggle:hover .icon-bar{
@@ -84,7 +84,7 @@
 	}
 
 	#bootstrapOverrides .navbar-default .navbar-toggle:focus .icon-bar {
-		background-color: #0BB4CE;
+		background-color: #E1B62F;
 	}
 
 	.dropdown-menu i {
@@ -407,6 +407,37 @@
 				  color: #E9674B;
 				}
 
+/*Projects Page*/
+.projects{
+	height: 100vh;
+	width: 320vw;
+	position: absolute;
+	left: 5vw;
+	background-color: #000;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+	padding-top: 60px;
+	padding-bottom: 30vh;
+}
+
+#bootstrapOverrides .projects .nav li{
+		width: 16.5vw;
+}
+
+.projectDetails{
+	height: auto;
+	width: 75vw;
+	padding-left: 15vw;
+	overflow-y: scroll;
+	float: left;
+}
+
+.projectDetails img{
+	height: auto;
+	width: 100%;
+}
+
 
 @media (max-width: 800px){
 	.projectSlides{
@@ -497,7 +528,7 @@
 
 @media (max-width: 768px){
 	#bootstrapOverrides .navbar-collapse{
-		border-color: #E1B62F;
+		border-color: #0BB4CE;
 	}
 
 	#bootstrapOverrides .nav li{
@@ -505,8 +536,8 @@
 	}
 
 	#bootstrapOverrides .dropdown-menu{
-		border-top: 1px dashed #0BB4CE;
-		border-bottom: 1px dashed #0BB4CE;
+		border-top: 1px dashed #E1B62F;
+		border-bottom: 1px dashed #E1B62F;
 	}
 }
 

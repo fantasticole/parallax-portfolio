@@ -32,6 +32,19 @@ $(function(){
 	    }
 	);
 
+	// var showNavBar = new ScrollMagic.Scene({triggerElement: "#about"})
+	// showNavBar.setTween(toggleNavBar)
+	// showNavBar.addTo(controller);
+
+	// $(window).resize(function(){
+	// 	if ($(window).width() < 768){
+	// 		showNavBar.enabled(false);
+	// 	}
+	// 	else {
+	// 		showNavBar.enabled(true);
+	// 	}
+	// });
+
 	function alterAnchor(){
 		if(location.hash.length > 0){
 			window.scrollTo(window.scrollX, window.scrollY - 75);
@@ -73,20 +86,14 @@ $(function(){
 
 	$('#contact').keydown(allowContactSubmission);
 
-	$('.slider').carousel({interval:7000});
-
-    $('.arrow-next').click(function(){
+    $('.arrow-next').click(function(event){
         var currentSlide = $('.active-slide');
         var nextSlide = $('.active-slide').next();
         if (nextSlide.length == 0){
             nextSlide = $('.slide').first();
         }
-        currentSlide.fadeOut(600).removeClass('active-slide');
-        nextSlide.delay(100).fadeIn(600).addClass('active-slide');
-        // currentSlide.fadeOut(500).removeClass('active-slide');
-        // setTimeout(function(){
-	        // nextSlide.fadeIn(600).addClass('active-slide');
-        // }, 300)
+        currentSlide.hide().removeClass('active-slide');
+        nextSlide.fadeIn(600).addClass('active-slide');
         var currentDot = $('.active-dot');
         var nextDot = $('.active-dot').next();
         if (nextDot.length == 0){
@@ -94,16 +101,17 @@ $(function(){
         }
         currentDot.removeClass('active-dot');
         nextDot.addClass('active-dot');
+        event.preventDefault();
     });
 
-    $('.arrow-prev').click(function(){
+    $('.arrow-prev').click(function(event){
         var currentSlide = $('.active-slide');
         var prevSlide = $('.active-slide').prev();
         if (prevSlide.length == 0){
             prevSlide = $('.slide').last();
         }
-        currentSlide.fadeOut(600).removeClass('active-slide');
-        prevSlide.delay(100).fadeIn(600).addClass('active-slide');
+        currentSlide.hide().removeClass('active-slide');
+        prevSlide.fadeIn(600).addClass('active-slide');
         var currentDot = $('.active-dot');
         var prevDot = $('.active-dot').prev();
         if (prevDot.length == 0){
@@ -111,6 +119,7 @@ $(function(){
         }
         currentDot.removeClass('active-dot');
         prevDot.addClass('active-dot');
+        event.preventDefault();
     });
 });
 
