@@ -38,14 +38,15 @@
 	color: #0BB4CE;
 }
 
-#bootstrapOverrides .navbar {
+#bootstrapOverrides .navbar{
   background-color: #000;
   border-color: #000;
   max-height: 55px;
+  margin-bottom: 10px;
 }
 
-.navbar a {
-  font-size: 100%;
+.navbar a{
+  font-size: 16px;
 }
 
 
@@ -69,6 +70,7 @@
 		padding: 0;
 		border: none;
 		text-align: center;
+		background-color: #000;
 	}
 
 	#bootstrapOverrides .navbar-default .navbar-toggle {
@@ -383,36 +385,36 @@
 		}
 
 			.arrow-prev {
-			  margin-right: 1vw;
-			  display: inline-block;
-			  vertical-align: top;
-			  font-size: 3vh;
+				margin-right: 1vw;
+				display: inline-block;
+				vertical-align: top;
+				font-size: 3vh;
 			}
 
 			.arrow-next {
-			  margin-left: 1vw;
-			  display: inline-block;
-			  vertical-align: top;
-			  font-size: 3vh;
+				margin-left: 1vw;
+				display: inline-block;
+				vertical-align: top;
+				font-size: 3vh;
 			}
 
 			.slider-dots {
-			  list-style: none;
-			  display: inline-block;
-			  padding-left: 0;
-			  position: relative;
-			  bottom: 2.5vh;
+				list-style: none;
+				display: inline-block;
+				padding-left: 0;
+				position: relative;
+				bottom: 2.5vh;
 			}
 
 				.slider-dots li {
-				  color: #fff;
-				  display: inline;
-				  font-size: 10vh;
-				  margin: 10px;
+					color: #fff;
+					display: inline;
+					font-size: 10vh;
+					margin: 10px;
 				}
 
 				.slider-dots li.active-dot {
-				  color: #E9674B;
+					color: #E9674B;
 				}
 
 
@@ -420,13 +422,13 @@
 
 /*Projects Page*/
 .projects{
-	height: 100vh;
+	height: calc(100vh - 60px);
 	width: 325vw;
 	background-color: #000;
 	background-image: url('../images/projects.png');
 	overflow-x: scroll;
 	overflow-y: hidden;
-	padding-top: 60px;
+	margin-top: 60px;
 	padding-bottom: 30vh;
 }
 
@@ -434,10 +436,15 @@
 	width: 16.5vw;
 }
 
+	.narrow-nav{
+		display: none;
+	}
+
 .projectDetails{
 	height: calc(100vh - 70px);
 	width: 75vw;
 	padding-left: 15vw;
+	padding-top: 10px;
 	overflow-y: scroll;
 	float: left;
 	margin-bottom: 10px;
@@ -453,6 +460,119 @@
 		border-radius: 5px;
 	}
 
+	/*Twitterbot timeline.*/
+	#bootstrapOverrides .tweets{
+		background-color: #000;
+		height: 36.5vw;
+		min-height: calc(35vw + 20px);
+		width: 60vw;
+		border-radius: 5px;
+		position: relative;
+	}
+
+		#bootstrapOverrides .twitter-follow-button{
+			margin-top: 0.5vw;
+			margin-bottom: 0.5vw;
+			/*height: 20px;*/
+		}
+
+		#bootstrapOverrides #timeline{
+			position: relative;
+			bottom: calc((3.5vw - 20px)/2);
+			left: 2vw;
+			top: 0;
+			height: 32vw;
+			width: 56vw;
+			background-color: #fff;
+			border-radius: 5px;
+		}
+
+		#bootstrapOverrides .tweets ul{
+			border-radius: 5px;
+			padding: 0px;
+			width: 54vw;
+			height: 30vw;
+			list-style: none;
+			position: absolute;
+			left: 1vw;
+			top: 1vw;
+			overflow: scroll;
+		}
+
+		#bootstrapOverrides .tweets li{
+			/*padding-top: 3px;*/
+			position: relative;
+			width: 100%;
+			margin: 0px 0px 5px;
+			height: 15vh;
+			overflow: hidden;
+			border: 1px solid black;
+			border-radius: 5px;
+			background-color: rgba(0, 0, 0, 0.05);
+		}
+
+		#bootstrapOverrides .user{
+			width: 15vh;
+			overflow: visible;
+			color: #000;
+			position: absolute;
+			left: 0;
+			height: 15vh;
+		}
+
+		#bootstrapOverrides .user img{
+			height: 100%;
+			width: 100%;
+			border-radius: 5px 0 0 5px;
+			border-right: 1px solid black;
+		}
+
+		#bootstrapOverrides .twitter{
+			position: absolute;
+			top: 5%;
+			left: 16vh;
+			width: 30vw;
+			text-align: left;
+			font-size: 2vh;
+		}
+
+		#bootstrapOverrides .tweet{
+			width: calc(45vw - 15vh);
+			overflow: hidden;
+			color: #000;
+			position: absolute;
+			left: 15vh;
+			height: 13.5vh;
+			font-size: 2.5vh;
+			padding-left: 0.5vw;
+			padding-right: 0.5vw;
+			padding-top: 4vh;
+		}
+
+			#bootstrapOverrides .act{
+				position: absolute;
+				right: 5%;
+				bottom: 5%;
+			}
+
+		#bootstrapOverrides .timePosted{
+			width: 8vw;
+			overflow: hidden;
+			color: #000;
+			position: absolute;
+			top: 2.5vh;
+			bottom: 2.5vh;
+			right: 0;
+			height: 10vh;
+			font-size: 2.2vh;
+			padding: 5px;
+			border-left: 1px dashed black
+		}
+
+
+
+
+
 	.ttt{
 		border-color: #000;
 	}
@@ -465,12 +585,12 @@
 	}
 
 		#bootstrapOverrides .narrow{
-			width: 15vw;
+			width: 19vw;
 			height: auto;
 		}
 		
 		#bootstrapOverrides .wide{
-			width: 35vw;
+			width: 39.5vw;
 			height: auto;
 		}
 
@@ -636,6 +756,38 @@
 	.infoIcon{
 		font-size: 2em;
 	}
+
+	/*Projects Page.*/
+	#bootstrapOverrides .tweets li, #bootstrapOverrides .user, #bootstrapOverrides .tweet{
+		height: 10vh;
+	}
+
+	#bootstrapOverrides .user{
+		width: 10vh;
+	}
+
+	#bootstrapOverrides .twitter{
+		left: 11vh;
+		font-size: 1.7vh;
+	}
+
+	#bootstrapOverrides .tweet{
+		left: 10vh;
+		width: calc(46vw - 10vh);
+		font-size: 2vh;
+		padding-top: 2.7vh;
+	}
+
+	#bootstrapOverrides .act{
+		font-size: 1.5vh;
+	}
+
+	#bootstrapOverrides .timePosted{
+		height: 8vh;
+		width: 9vw;
+		top: 1vh;
+		font-size: 1.2vh;
+	}
 }
 
 @media (max-width: 768px){
@@ -643,13 +795,41 @@
 		border-color: #0BB4CE;
 	}
 
-	#bootstrapOverrides .nav li, #bootstrapOverrides .projects .nav li{
+	#bootstrapOverrides .nav li{
 		width: 100vw;
 	}
 
 	#bootstrapOverrides .dropdown-menu{
 		border-top: 1px dashed #E1B62F;
 		border-bottom: 1px dashed #E1B62F;
+	}
+
+	#bootstrapOverrides .projects .nav{
+		height: 60px;
+	}
+
+	#bootstrapOverrides .projects .nav li{
+		display: inline-block;
+		float: left;
+		height: 100%
+	}
+
+	#bootstrapOverrides .projects .navbar-nav{
+		display: none;
+	}
+
+	.narrow-nav{
+		display: block;
+	}
+
+	#bootstrapOverrides .nav>li>a:focus, #bootstrapOverrides .nav>li>a:hover{
+		display: block;
+		background-color: #000;
+	}
+
+	.narrow-nav>li>a>i{
+		padding-top: 8px;
+		font-size: 25px;
 	}
 }
 
@@ -667,6 +847,67 @@
 		height: 40vh;
 		top: 10vh;
 		margin-top: 2vh;
+	}
+
+	.projects{
+		width: 365vw;
+	}
+
+
+	.projectDetails{
+		width: 90vw;
+		padding-left: 5.8vw;
+		margin-bottom: 0;
+	}
+
+	#mismatch{
+		margin-left: 0;
+	}
+
+		.projectDetails img, .ttt, #bootstrapOverrides .tweets{
+			height: 51.4vw;
+			width: 84.2vw;
+			border-radius: 5px;
+		}
+
+		#bootstrapOverrides .narrow{
+			width: 100%;
+			height: auto;
+		}
+		
+		#bootstrapOverrides .wide{
+			width: 100%;
+			height: auto;
+			margin-bottom: 10px;
+		}
+
+	#bootstrapOverrides #timeline{
+		left: 2vw;
+		top: 0;
+		bottom: calc((4.5vw - 20px)/2);
+		height: 41vw;
+		width: 80vw;
+	}
+
+	#bootstrapOverrides .tweets ul{
+		height: 39vw;
+		width: 78vw;
+	}
+
+	#bootstrapOverrides .tweets li{
+		width: 78vw;
+	}
+
+	#bootstrapOverrides .twitter{
+		left: 11vh;
+		width: 54vw;
+	}
+
+	#bootstrapOverrides .tweet{
+		left: 10vh;
+		width: 54vw;
+		padding-left: 1vw;
+		padding-right: 1vw;
 	}
 }
 
@@ -697,3 +938,4 @@
 
 
 
+/*Queen of the Road by OPI from the Ford Mustang Collection. Queen of the Road by OPI from the Ford Mustang Collection. Queen of the Road by O*/
