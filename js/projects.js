@@ -1,21 +1,30 @@
 $(function(){
-   $('.projects li>a').click(function(event){
-        var loc = $(this)[0].hash;
+	function scrollToProject(loc){
         var width = $(window).width();
-        var move = width/20;
-        console.log(move);
-
-        if ($(window).width > 550){
+        var oneWidth = parseInt(width)/100;
+        if ($(window).width() > 550){
+        	var move = oneWidth*5;
 	        $('html, body').animate({
 	            scrollLeft: $(loc).offset().left - move
 	        }, 600);
         }
         else{
-        	move /=2;
+        	var move = oneWidth*2;
 	        $('html, body').animate({
 	            scrollLeft: $(loc).offset().left - move
 	        }, 600);
         }
+	}
+
+	var here = window.location.href;
+
+	if (here.indexOf('#') > -1){
+		var linkedProj = here.slice(here.indexOf('#'));
+		scrollToProject(linkedProj);
+	}
+
+	$('.projects li>a').click(function(event){
+        scrollToProject($(this)[0].hash)
         event.preventDefault();
     });
 

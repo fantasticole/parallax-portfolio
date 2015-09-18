@@ -583,14 +583,15 @@
 		background-color: rgba(0, 0, 0, 0.7);
 		border-radius: 5px;
 	}
-
-		#bootstrapOverrides .narrow{
-			width: 19vw;
-			height: auto;
-		}
 		
 		#bootstrapOverrides .wide{
 			width: 39.5vw;
+			height: auto;
+			margin-right: 1vw;
+		}
+
+		#bootstrapOverrides .narrow{
+			width: 19vw;
 			height: auto;
 		}
 
@@ -869,16 +870,16 @@
 			width: 84.2vw;
 			border-radius: 5px;
 		}
-
-		#bootstrapOverrides .narrow{
-			width: 100%;
-			height: auto;
-		}
 		
 		#bootstrapOverrides .wide{
 			width: 100%;
 			height: auto;
 			margin-bottom: 10px;
+		}
+
+		#bootstrapOverrides .narrow{
+			width: 100%;
+			height: auto;
 		}
 
 	#bootstrapOverrides #timeline{
